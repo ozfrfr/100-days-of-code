@@ -12,4 +12,11 @@ sum = int(first) + int(second)
 
 print(f"{first} + {second} = {sum}")
 
+#floor division
+print(5 // 2) #result would be in type int instead of float 
+# = 2
+
+#rounding result
+print(round(8 / 3, 2)) #rounding the result to 2 decimal place
+# = 2.67
 
