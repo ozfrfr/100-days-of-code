@@ -1,7 +1,7 @@
-#using if and else
+# using if and else
 # function to know if a number is even
 
-print("Check if a number ris even or not")
+print("Check if a number is even or not")
 num = int(input("Enter a number "))
 
 if num % 2 == 0:
