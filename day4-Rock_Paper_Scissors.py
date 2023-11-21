@@ -61,13 +61,3 @@ elif comp_rand_int == 1 and inp == 0:
 else:
     print("Draw\n")
 
-
-
-    
-
-
-
-
-
-
-
