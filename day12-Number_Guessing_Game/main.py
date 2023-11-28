@@ -52,11 +52,13 @@ for attempt in range(count):
         guess = int(input("Make a guess: "))
         if guess > chosen_number:
             print("Too High")
+            print("Guess again.")
         elif guess < chosen_number:
             print("Too Low")
+            print("Guess again.")
         elif guess == chosen_number:
             game_finished = True
-            print(f"You guessed the right number, which is {chosen_number}. You Win!\n")
+            print(f"You got it! the answer is {chosen_number}. You win!\n")
         if guess != chosen_number:
             count -= 1
         if count == 0:
