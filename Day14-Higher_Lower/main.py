@@ -6,6 +6,11 @@ from game_data import data
 
 
 def compare_a_message():
+    """
+    The function `compare_a_message` returns a formatted string that compares the name, description, and
+    country of an object `a`.
+    :return: a string that includes the name, description, and country of object A.
+    """
     name_a = a['name']
     description_a = a['description']
     country_a = a['country']
@@ -20,7 +25,6 @@ def compare_b_message():
 def highest():
     max_followers = max(followers_a_count, followers_b_count)
     return max_followers
-
 
 score = 0
 game_end = False
