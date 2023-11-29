@@ -5,18 +5,13 @@ from art import vs
 from game_data import data
 
 
-def compare_a_message():
-    """
-    The function `compare_a_message` returns a formatted string that compares the name, description, and
-    country of an object `a`.
-    :return: a string that includes the name, description, and country of object A.
-    """
+def compare_a_description():
     name_a = a['name']
     description_a = a['description']
     country_a = a['country']
     return f"Compare A: {name_a}, a {description_a}, from {country_a}"
 
-def compare_b_message():
+def compare_b_description():
     name_b = b['name']
     description_b = b['description']
     country_b = b['country']
@@ -40,9 +35,9 @@ while not game_end:
     if score > 0:
         print(f"You're right! Current score: {score}")
 
-    print(compare_a_message())
+    print(compare_a_description())
     print(vs)
-    print(compare_b_message())
+    print(compare_b_description())
 
     user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
 
