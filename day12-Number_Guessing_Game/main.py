@@ -6,7 +6,6 @@ print("Welcome to the Number Guessing Game!\n")
 print("I'm thinking of a number between 1 and 100. guess\n")
 difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 
-
 def number_list():
     """
     The function "number_list" creates a list of numbers from 1 to 100.
@@ -16,7 +15,6 @@ def number_list():
     for num in range(1, 101):
         numbers.append(num)
     return numbers
-
 
 def attempt_count():
     """
@@ -30,7 +28,6 @@ def attempt_count():
         attempt = 5
     return attempt
 
-
 def random_number_pick():
     """
     The function "random_number_pick" returns a randomly chosen number from a list called "numbers".
@@ -38,7 +35,6 @@ def random_number_pick():
     """
     pick = random.choice(numbers)
     return pick
-
 
 numbers = number_list()
 count = attempt_count()
