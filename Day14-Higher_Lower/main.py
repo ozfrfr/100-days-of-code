@@ -21,13 +21,11 @@ def highest():
     max_followers = max(followers_a_count, followers_b_count)
     return max_followers
 
-
 score = 0
 game_end = False
 prev_b = None
 
 while not game_end:
-    os.system('clear') # or  os.system('cls') on Windows
     a = prev_b if prev_b else random.choice(data) 
     followers_a_count = a['follower_count']
     
