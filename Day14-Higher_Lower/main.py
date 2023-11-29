@@ -4,6 +4,7 @@ from art import logo
 from art import vs
 from game_data import data
 
+
 def compare_a_message():
     name_a = a['name']
     description_a = a['description']
@@ -17,8 +18,9 @@ def compare_b_message():
     return f"Compare B: {name_b}, a {description_b}, from {country_b}"
 
 def highest():
-    max_followers = max([followers_a_count, followers_b_count])
+    max_followers = max(followers_a_count, followers_b_count)
     return max_followers
+
 
 score = 0
 game_end = False
@@ -30,7 +32,7 @@ while not game_end:
     followers_b_count = b['follower_count']
 
     print(logo)
-    score = 0
+
     if score > 0:
         print(f"You're right! Current score: {score}")
 
@@ -41,15 +43,16 @@ while not game_end:
     user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
 
     if user_input == "a":
-        user_choice = int(followers_a_count)
+        user_choice = followers_a_count
     elif user_input == "b":
-        user_choice = int(followers_b_count)
+        user_choice = followers_b_count
 
-    higher = int(highest())
+    higher = highest()
 
     if user_choice == higher:
         score += 1
         game_end = False
+        os.system('clear')
     else:
         os.system('clear')
         print(logo)
