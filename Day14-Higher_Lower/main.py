@@ -47,9 +47,7 @@ while not game_end:
     elif user_input == "b":
         user_choice = followers_b_count
 
-    higher = highest()
-
-    if user_choice == higher:
+    if user_choice == highest():
         score += 1
         game_end = False
         os.system('clear')
