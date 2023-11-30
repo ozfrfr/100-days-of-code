@@ -11,11 +11,13 @@ def compare_a_description():
     country_a = a['country']
     return f"Compare A: {name_a}, a {description_a}, from {country_a}"
 
+
 def compare_b_description():
     name_b = b['name']
     description_b = b['description']
     country_b = b['country']
     return f"Compare B: {name_b}, a {description_b}, from {country_b}"
+
 
 def highest():
     max_followers = max(followers_a_count, followers_b_count)
@@ -27,11 +29,11 @@ game_end = False
 prev_b = None
 
 while not game_end:
-    os.system('clear') # or or os.system('cls') on Windows 
-    
-    a = prev_b if prev_b else random.choice(data) 
+    os.system('clear')  # or or os.system('cls') on Windows
+
+    a = prev_b if prev_b else random.choice(data)
     followers_a_count = a['follower_count']
-    
+
     b = random.choice(data)
     followers_b_count = b['follower_count']
 
@@ -46,6 +48,7 @@ while not game_end:
 
     user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
 
+    user_choice = None
     if user_input == "a":
         user_choice = followers_a_count
     elif user_input == "b":
@@ -54,10 +57,11 @@ while not game_end:
     if user_choice == highest():
         score += 1
         game_end = False
-        prev_b = b # This is done so that in the next iteration of the while loop, the value of `b` from the current iteration can be used as the value of `a` in the next iteration. 
+        prev_b = b  # This is done so that in the next iteration of the while loop, the value of `b` from the current
+        # iteration can be used as the value of `a` in the next iteration.
         os.system('clear')
     else:
         os.system('clear')
         print(logo)
-        print(f"Sorry thats wrong. Final score: {score}")
+        print(f"Sorry that's wrong. Final score: {score}")
         game_end = True
