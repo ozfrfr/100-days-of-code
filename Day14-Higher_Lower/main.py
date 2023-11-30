@@ -32,9 +32,12 @@ while not game_end:
     os.system('clear')  # or or os.system('cls') on Windows
 
     a = prev_b if prev_b else random.choice(data)
-    followers_a_count = a['follower_count']
-
     b = random.choice(data)
+
+    if a == b:
+        b = random.choice(data)
+
+    followers_a_count = a['follower_count']
     followers_b_count = b['follower_count']
 
     print(logo)
