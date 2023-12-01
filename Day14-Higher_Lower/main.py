@@ -12,11 +12,11 @@ def compare_a_description():
     return f"Compare A: {name_a}, a {description_a}, from {country_a}"
 
 
-def compare_b_description():
+def against_b_description():
     name_b = b['name']
     description_b = b['description']
     country_b = b['country']
-    return f"Compare B: {name_b}, a {description_b}, from {country_b}"
+    return f"Against B: {name_b}, a {description_b}, from {country_b}"
 
 
 def highest():
@@ -47,7 +47,7 @@ while not game_end:
 
     print(compare_a_description())
     print(vs)
-    print(compare_b_description())
+    print(against_b_description())
 
     user_input = input("Who has more followers? Type 'A' or 'B': ").lower()
 
