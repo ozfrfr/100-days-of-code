@@ -1,41 +1,31 @@
-import colorgram
-import turtle as t
+import turtle as turtle_module
 import random
 
-timmy = t
-
-colors = colorgram.extract("Damien_Hirst.jpg", 30)
-
-rgb_colors = []
-for color in colors:
-    r = color.rgb.r
-    g = color.rgb.g
-    b = color.rgb.b
-    new_color = (r, g, b)
-    rgb_colors.append(new_color)
-
-# gotten from rgb_colors[]
-color_list = [(248, 247, 247), (243, 247, 246), (246, 243, 245), (239, 242, 245), (2, 13, 30), (45, 25, 18),
-              (210, 134, 117), (16, 107, 159), (242, 210, 93), (221, 85, 68), (167, 5, 25), (166, 55, 89),
-              (146, 79, 58), (185, 134, 154), (207, 71, 103), (97, 3, 16), (162, 162, 61), (9, 63, 35), (7, 97, 63),
-              (32, 138, 75), (6, 210, 202), (6, 61, 138), (3, 171, 211), (140, 227, 216), (122, 190, 155),
-              (124, 174, 191), (222, 177, 210), (97, 219, 227), (88, 54, 45), (32, 84, 90)]
-
-timmy.setheading(225)
-timmy.forward(300)
-timmy.setheading(0)
+turtle_module.colormode(255)
+tim = turtle_module.Turtle()
+tim.speed("fastest")
+tim.penup()
+tim.hideturtle()
+color_list = [(202, 164, 109), (238, 240, 245), (150, 75, 49), (223, 201, 135), (52, 93, 124), (172, 154, 40), (140, 30, 19), (133, 163, 185), (198, 91, 71), (46, 122, 86), (72, 43, 35), (145, 178, 148), (13, 99, 71), (233, 175, 164), (161, 142, 158), (105, 74, 77), (55, 46, 50), (183, 205, 171), (36, 60, 74), (18, 86, 90), (81, 148, 129), (148, 17, 20), (14, 70, 64), (30, 68, 100), (107, 127, 153), (174, 94, 97), (176, 192, 209)]
+tim.setheading(225)
+tim.forward(300)
+tim.setheading(0)
 number_of_dots = 100
 
 for dot_count in range(1, number_of_dots + 1):
-    timmy.dot(20, random.choice(color_list))
-    timmy.forward(50)
+    tim.dot(20, random.choice(color_list))
+    tim.forward(50)
 
     if dot_count % 10 == 0:
-        timmy.setheading(90)
-        timmy.forward(50)
-        timmy.setheading(180)
-        timmy.forward(500)
-        timmy.setheading(0)
+        tim.setheading(90)
+        tim.forward(50)
+        tim.setheading(180)
+        tim.forward(500)
+        tim.setheading(0)
+
+
+
+
 
 
 
